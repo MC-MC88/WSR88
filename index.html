@@ -450,9 +450,7 @@
 
 <script>
 /* =========================================================
-   WSR88 — frontend only. All backend calls, request bodies,
-   localStorage keys and data shapes below are UNCHANGED from
-   the original build. Only presentation/UX logic was added.
+  
    ========================================================= */
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwnuu4zUH7e-6vhQ1fKa1DwiSNzrQ-Owpt_ZnBiHjEAeEVYJDY9ibg1bkNzD80KJFLnRQ/exec';
@@ -505,7 +503,7 @@ function initTheme(){
   setTheme(saved);
 }
 
-/* ---------- TOASTS (replaces alert() with same trigger logic) ---------- */
+/* ----------  ---------- */
 function toast(msg){
   const stack = document.getElementById('toastStack');
   const t = document.createElement('div');
@@ -518,7 +516,7 @@ function toast(msg){
   }, 2400);
 }
 
-/* ---------- AVATAR COLOR (decorative only) ---------- */
+/* ----------  ---------- */
 function avatarColorFor(seed){
   let hash = 0;
   const s = String(seed || 'W');
@@ -563,7 +561,7 @@ function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('open');
 }
 
-/* ---------- DATA FETCH (unchanged backend call) ---------- */
+/* ----------  ---------- */
 async function fetchUsersAndData() {
     renderSkeleton();
     try {
@@ -593,7 +591,7 @@ function renderSkeleton(){
     container.innerHTML = html;
 }
 
-/* ---------- IMAGE HANDLING (unchanged) ---------- */
+/* ---------- ---------- */
 function handleImageSelect(event) {
     const file = event.target.files[0];
     if (file) {
@@ -672,7 +670,7 @@ function toggleSidebar() {
     document.getElementById('sidebarOverlay').classList.toggle('active');
 }
 
-/* ---------- ARCHIVE / DATE FILTER (unchanged logic) ---------- */
+/* ---------- ---------- */
 function renderHistoriqueDates(posts) {
     const list = document.getElementById('historiqueFilterList');
     const activeDate = list.dataset.active || 'all';
@@ -688,7 +686,7 @@ function renderHistoriqueDates(posts) {
     });
 }
 
-/* ---------- POST RENDERING (markup restyled, ids/behavior unchanged) ---------- */
+/* ----------  ---------- */
 function renderPosts(posts) {
     const container = document.getElementById('postsContainer');
     container.innerHTML = '';
@@ -739,7 +737,7 @@ function renderPosts(posts) {
     });
 }
 
-/* ---------- PUBLISH (unchanged backend contract) ---------- */
+/* ---------- ---------- */
 async function handlePublish() {
     if (!currentUser) {
         toast("يجب إنشاء حساب أولاً لتتمكن من النشر!");
@@ -842,7 +840,7 @@ async function votePost(postId, colorType) {
     } catch(e) {}
 }
 
-/* ---------- DELETE (unchanged — local-only, as in original) ---------- */
+/* ---------- DELETE  ---------- */
 async function deletePost(postId) {
     if (confirm("هل تريد حذف هذا المنشور؟")) {
         allPostsCache = allPostsCache.filter(p => p.id !== postId);
@@ -851,7 +849,7 @@ async function deletePost(postId) {
     }
 }
 
-/* ---------- FILTER (unchanged) ---------- */
+/* ---------- FILTER ---------- */
 function filterByDate(dateStr) {
     const list = document.getElementById('historiqueFilterList');
     list.dataset.active = dateStr;
