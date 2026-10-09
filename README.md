@@ -1,131 +1,197 @@
+<h2 id="français">🇫🇷 Version française</h2>
+
 <div align="center">
 
-# 🌐 WSR88
+# 🎯 WSR88 — MC88
+
+**Écrire. Partager. Lire.**
+
+</div>
+
+🌍 **Langues :** [Français](#français) · [English](#english)
+
+---
+
+> **En bref** — Un mini réseau social anonyme avec votes tricolores et quatre thèmes visuels.
+> 
+> **Comptes légers · Votes colorés · Quatre thèmes**
+
+<!-- 
+## 📸 Aperçu
+
+<div align="center">
+  <img src="https://github.com/mohamed005cheikh-rgb/[REPO]/raw/main/images/Sc1.png" alt="[Description]" width="100%" />
+</div>
+
+---
+
+🔗 **Démo en ligne :** [https://...](https://...)
+📦 **Code source :** [https://github.com/mohamed005cheikh-rgb/[REPO]](https://github.com/mohamed005cheikh-rgb/[REPO])
+-->
+
+## 👋 Bienvenue
+
+WSR88 est une page web qui permet de publier des messages courts, avec ou sans image. Chaque message peut recevoir trois types de votes : rouge, vert et bleu. Les comptes sont anonymes : un nom et un ID à trois chiffres. Tout fonctionne via un Google Apps Script comme backend.
+
+---
+
+## ✨ Ce que vous trouverez
+
+**Publier un message avec image.**  
+Écrivez du texte, ajoutez une image depuis votre appareil, et publiez. L'image est encodée en base64 et envoyée avec le message. Elle s'affiche dans le flux.
+
+**Trois votes par message.**  
+Chaque message a trois compteurs : rouge, vert et bleu. Vous votez une fois par message. Si vous changez de vote, l'ancien est décrémenté et le nouveau incrémenté.
+
+**Comptes anonymes légers.**  
+Un nom (10 caractères max) et un ID à trois chiffres. Pas d'email, pas de mot de passe. L'ID est utilisé pour colorer l'avatar et limiter les votes uniques.
+
+**Quatre thèmes visuels.**  
+Midnight Ink (nuit), Ink & Paper (papier), Nord Frost (clair), Sahara Dusk (coucher de soleil). Le thème choisi est conservé localement.
+
+**Archive par date.**  
+La barre latérale liste les dates des messages. Cliquez sur une date pour filtrer le flux. Le filtre "Tous" affiche tout.
+
+---
+
+## 🧭 Comment ça marche
+
+**1. Créez un compte.**  
+Cliquez sur "Sign Up". Entrez un nom de 10 caractères max et un ID de trois chiffres. Le compte est créé localement et enregistré côté serveur.
+
+**2. Publiez un message.**  
+Écrivez dans la zone de texte, ajoutez éventuellement une image, cliquez sur Publier. Le message apparaît immédiatement dans le flux.
+
+**3. Votez.**  
+Cliquez sur un des trois boutons colorés. Un seul vote par message. Vous pouvez changer votre vote à tout moment.
+
+**4. Filtrez par date.**  
+Cliquez sur une date dans la barre latérale pour ne voir que les messages de ce jour.
+
+C'est tout. L'identité reste minimale, les votes restent simples.
+
+---
+
+## 🛠️ Petits coups de main
+
+**Je ne peux pas publier sans compte ?**  
+Oui. WSR88 demande un compte anonyme pour publier et voter. C'est pour éviter le spam et limiter les votes multiples.
+
+**Mon vote ne change pas ?**  
+Vous ne pouvez voter qu'une fois par message. Si vous cliquez une seconde fois sur le même bouton, le vote est ignoré.
+
+**Le flux ne se met pas à jour ?**  
+Rechargez la page pour récupérer les derniers messages depuis le backend. Le site charge les données au démarrage.
+
+**Les images sont-elles stockées ?**  
+L'image est encodée en base64 et envoyée avec le message. Elle est stockée avec les autres données du post côté Google Sheets.
+
+---
+
+<br /><br /><br />
+
+<h2 id="english">🇬🇧 English version</h2>
+
+<div align="center">
+
+# 🎯 WSR88 — MC88
 
 **Write. Share. Read.**
 
 </div>
 
+🌍 **Languages:** [Français](#français) · [English](#english)
+
 ---
+
+> **In short** — A lightweight anonymous social network with three-color votes and four visual themes.
+> 
+> **Light accounts · Colored votes · Four themes**
+
+<!-- 
+## 📸 Preview
+
+<div align="center">
+  <img src="https://github.com/mohamed005cheikh-rgb/[REPO]/raw/main/images/Sc1.png" alt="[Description]" width="100%" />
+</div>
+
+---
+
+🔗 **Live demo:** [https://...](https://...)
+📦 **Source code:** [https://github.com/mohamed005cheikh-rgb/[REPO]](https://github.com/mohamed005cheikh-rgb/[REPO])
+-->
 
 ## 👋 Welcome
 
-WSR88 is a small place on the internet where people leave short notes for each other.
-
-You write a thought — a sentence, a small observation, something that crossed your mind on the way home — you can attach a picture if you like, and you publish it. Someone else reads it. They might nod, or smile, or quietly disagree, and they show it with a red, green, or blue dot. That's the whole conversation.
-
-There is no algorithm deciding what you see. There are no follower counts, no trending pages, no engagement loop pulling you back. Just a feed of notes, written by real people, refreshed when someone has something to say.
-
-It's quiet here. And that's the point.
+WSR88 is a web page to publish short messages, with or without images. Each message can receive three types of votes: red, green and blue. Accounts are anonymous: a name and a three-digit ID. Everything runs through a Google Apps Script backend.
 
 ---
-<!-- 
-## 📸 Look Inside
 
-<div align="center">
-  <img src="https://github.com/mohamed005cheikh-rgb/wsr88/raw/main/images/Sc1.jpg" alt="The feed" width="100%" />
-</div>
-
-<br />
-
-<div align="center">
-  <img src="https://github.com/mohamed005cheikh-rgb/wsr88/raw/main/images/Sc2.jpg" alt="Writing a post" width="100%" />
-</div>
-
-<br />
-
-<div align="center">
-  <img src="https://github.com/mohamed005cheikh-rgb/wsr88/raw/main/images/Sr5.gif" alt="Publishing a note" width="100%" />
-</div>
-
-<br />
-
-<div align="center">
-  <img src="https://github.com/mohamed005cheikh-rgb/wsr88/raw/main/images/Sr2.gif" alt="Voting with colored dots" width="100%" />
-</div>
-
----
--->
 ## ✨ What you'll find
 
-**A simple account — and that's it.**  
-You pick a name (up to ten characters) and a three-digit ID — something like `088`. That's your identity here. No email, no password to remember, no verification link. You're in within seconds.
+**Publish a message with image.**  
+Write text, add an image from your device, and publish. The image is base64-encoded and sent with the message. It displays in the feed.
 
-**A space to write.**  
-A clean text box, one image if you want to attach one, and a publish button. That's the whole editor. No formatting toolbar, no drafts folder, no scheduling. You write, you send, it's there.
+**Three votes per message.**  
+Each message has three counters: red, green and blue. You vote once per message. If you change your vote, the old one is decremented and the new one incremented.
 
-**Three colored dots instead of a like button.**  
-Every post carries three small circles — red, green, and blue. You tap the one that matches how the post made you feel. There's no public count shouting for attention; your choice is remembered quietly on your own device. Come back tomorrow, and it's still there.
+**Lightweight anonymous accounts.**  
+A name (10 characters max) and a three-digit ID. No email, no password. The ID colors the avatar and limits unique votes.
 
-**A calm look — day or night.**  
-A soft light theme for mornings, a deeper dark theme for late evenings. One button switches between them, and the site remembers which one you prefer.
+**Four visual themes.**  
+Midnight Ink (night), Ink & Paper (paper), Nord Frost (light), Sahara Dusk (sunset). The chosen theme is saved locally.
 
-**An archive to wander through.**  
-If you want to look back at what was being said on a particular day, a simple date filter brings those posts forward. It's a small feature, but it turns the feed into something you can revisit — almost like flipping back through a notebook.
-
-**Nothing you do here follows you around.**  
-Your session and your votes live on your own device. Nothing is tracked across the web, nothing is sold, nothing is used to guess what you might want to buy next.
-
-**It works wherever you are.**  
-Phone in your pocket on the bus, laptop open at a café, desktop at home — the layout adjusts, the buttons stay comfortable under your thumb, and the feed loads fast on any connection.
+**Archive by date.**  
+The sidebar lists message dates. Click a date to filter the feed. The "All" filter shows everything.
 
 ---
 
 ## 🧭 How it works
 
-**1. Sign up.**  
-Pick a name and a three-digit ID. There's no email step, no confirmation. You're in.
+**1. Create an account.**  
+Click "Sign Up". Enter a name of up to 10 characters and a three-digit ID. The account is created locally and saved on the server side.
 
-**2. Write.**  
-Type what's on your mind. Add a photo if the words aren't enough. When you're ready, press **Publish**.
+**2. Publish a message.**  
+Write in the text area, optionally add an image, click Publish. The message appears immediately in the feed.
 
-**3. Browse.**  
-The feed shows what others have written — recent notes first, or filtered by a date you choose.
+**3. Vote.**  
+Click one of the three colored buttons. One vote per message. You can change your vote at any time.
 
-**4. React — quietly.**  
-Tap red, green, or blue under a post. Your vote is saved on your device. Nobody sees a running tally shouting for attention.
+**4. Filter by date.**  
+Click a date in the sidebar to see only messages from that day.
 
-**5. Come and go as you like.**  
-There's no streak to keep, no notification waiting, no pressure to post. Open it when you want. Close it when you're done.
-
-That's the whole experience. Simple by design.
+That's it. Identity stays minimal, votes stay simple.
 
 ---
 
-## 🛠️ A few small helps
+## 🛠️ A little help
 
-**"I lost my ID — can I get it back?"**  
-There's no password reset, because there was never a password. Your ID lives in your browser's local storage. If you clear your browser data, or open the site on a different device, you'll need to sign up again. If you plan to use WSR88 regularly, it's worth noting your name and ID somewhere safe.
+**I cannot publish without an account?**  
+Yes. WSR88 requires an anonymous account to publish and vote. It is to prevent spam and limit multiple votes.
 
-**"My votes disappeared."**  
-Same thing — votes are saved locally. If your browser was in private mode, or you cleared site data, the votes go with it. In a normal window, everything sticks.
+**My vote does not change?**  
+You can only vote once per message. If you click the same button a second time, the vote is ignored.
 
-**"I published something by mistake."**  
-Right now, posts stay where they are. If this becomes a real issue, let me know — being able to remove your own note is a reasonable request.
+**The feed does not update?**  
+Reload the page to fetch the latest messages from the backend. The site loads data on startup.
 
-**"The theme switches by itself when I move to another device."**  
-It doesn't — your theme choice is stored per device. If you switch from phone to laptop, you may need to tap the toggle once on the new device.
-
-**"Nothing loads."**  
-WSR88 runs on Google Apps Script, which occasionally needs a moment to wake up if it hasn't been used in a while. Reload the page once, and it should be back.
-
-**"Can I use it on my phone?"**  
-Yes — it's built to be comfortable on a phone first. The layout adapts to any screen size.
+**Are images stored?**  
+The image is base64-encoded and sent with the message. It is stored with the other post data on Google Sheets.
 
 ---
 
 <div align="center">
 
-### 📞 A question, an idea, a bug?
+### 📞 Une question, une idée ? / A question, an idea?
 
 [![Email](https://img.shields.io/badge/Email-mohamed005cheikh@gmail.com-d14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamed005cheikh@gmail.com)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-+222_30_72_64_75-25D366?style=flat-square&logo=whatsapp&logoColor=white)](https://wa.me/22230726475)
-[![GitHub](https://img.shields.io/badge/GitHub-mohamed005cheikh--rgb-181717?style=flat-square&logo=github)](https://github.com/mohamed005cheikh-rgb)
+[![GitHub](https://img.shields.io/badge/GitHub-MC-MC88-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MC-MC88)
 
 <br />
 
-*Your words, your community.*
+*Écrivez. / Write.*
 
-<sub>© 2026 Mohamed Cheikh — MC88</sub>
+<sub>MIT License · © 2026 Mohamed Cheikh — MC88</sub>
 
 </div>
